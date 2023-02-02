@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="book-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">Barbosa</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="amenities.html">Amenities</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="book.html"><button id="book-room">Book Room</button></a></li>  
+                </ul>
+            </nav>        
+        </header>
+        <div class="calendar-container">
+            <div id="in" class="calendar">
+                <h3>Check-in</h3>
+                <div class="select-container">
+                    <button onclick="prevMonth(selectIn)">◄</button>
+                    <select class="month-year" id="month-in"></select>
+                    <button onclick="nextMonth(selectIn)">►</button>
+                </div>
+                <div class="day-names">
+                    <p>SUN</p>
+                    <p>MON</p>
+                    <p>TUE</p>
+                    <p>WED</p>
+                    <p>THU</p>
+                    <p>FRI</p>
+                    <p>SAT</p>
+                </div>
+                <div class="days" id="days-in">
+                </div>
+            </div>
+            <div id="out" class="calendar">
+                <h3>Check-out</h3>
+                <div class="select-container">
+                    <button onclick="prevMonth(selectOut)">◄</button>
+                    <select class="month-year" id="month-out"></select>
+                    <button onclick="nextMonth(selectOut)">►</button>
+                </div>
+                <div class="day-names">
+                    <p>SUN</p>
+                    <p>MON</p>
+                    <p>TUE</p>
+                    <p>WED</p>
+                    <p>THU</p>
+                    <p>FRI</p>
+                    <p>SAT</p>
+                </div>
+                <div class="days" id="days-out">
+                </div>
+            </div>
+            <div class="image">
+                <img id="default" class="active" src="./images/Stocksy_txp824ffa5crXt000_Original_845128.jpg" alt="">
+                <img id="winter" src="./images/josh-hild-_TuI8tZHlk4-unsplash.jpg" alt="">
+                <img id="summer" src="./images/boxed-water-is-better-6WrKKQcEnXk-unsplash.jpg" alt="">
+                <img id="spring" src="./images/aamyr-peN6l68AWaw-unsplash.jpg" alt="">
+                <img id="fall" src="./images/elijah-m-henderson-DMED-sOt1Ak-unsplash.jpg" alt="">
+            </div>
+        </div>
+          
+        <footer>You can find more examples of my work <a href="#">here</a></footer>
+    </div>
+    <script src="./book-script.js"></script>
+</body>
+</html>

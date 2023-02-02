@@ -1,0 +1,314 @@
+/*Home*/
+
+body {
+    color: white;
+    background-color: hsl(0, 30%, 7%);
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90vw;
+}
+
+header {
+    top: 0;
+    left: 0;
+    height: 25vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(0, 30%, 7%);
+    z-index: 999;
+}
+
+h1 {
+    grid-column-start: 1;
+    align-self: center;
+}
+
+nav {
+    grid-column-start: 2;
+    justify-self: end;
+    align-self: center;
+    overflow: visible;
+}
+
+ul {
+    width: 100%;
+    padding-left: 0;
+}
+
+li {
+    margin-left: 2vh;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    font-size: 1.5vw;
+    line-height: 2vw;
+}
+
+#book-room {
+    grid-column-start: 5;
+}
+
+.image {
+    position: relative;
+    height: 52vw;
+    overflow: hidden;
+}
+
+#hero {
+    height: 65vw;
+    width: 100%;
+    margin-bottom: 10vw;  
+}
+
+h2 {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    font-size: 4vw;
+}
+
+#hero .image {
+    width: 100%;
+    margin-top: 4vw;
+    position: relative;
+}
+
+#hero img {
+    max-width: 100%;
+    position: absolute;
+}
+
+.banner {
+    height: 55vw;
+    width: 100%;  
+    display: grid;
+    gap: 4vw;
+    margin-top: 10vw;
+    margin-bottom: 6vw;
+}
+
+.img1, .img2, .img3 {
+    opacity: 0;
+    transition: 800ms opacity ease-in-out;
+    transition-delay: 800ms;
+}
+
+.banner .active {
+    opacity: 1;
+    transition-delay: 0;
+}
+
+h3 {
+    font-size: 2.5vw;
+}
+
+#about, #amenities{
+    grid-template-columns: 4fr 3fr;
+}
+
+#gallery {
+    grid-template-columns: 3fr 4fr;
+}
+
+.banner img {
+    max-width: 100%;
+    position: absolute;
+}
+
+#testimonies {
+    height: 20vw;
+    background-color: rgb(89, 74, 74);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#testimonies p {
+    margin: 1vw;
+}
+
+.comment {
+    padding: 2vw;
+    padding-bottom: 0;
+    font-size: 2vw;
+    grid-row-start: 1;
+}
+
+.signature {
+    padding: 2vw;
+    padding-top: 0;
+    grid-row-start: 2;
+}
+
+#book {
+    margin: 5vw auto; 
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+}
+
+#book button {
+    width: 100%;
+    font-size: 1.5vw;
+}
+
+footer {
+    height: 10vh;
+    margin-top: 10vw;
+}
+
+button {
+    border-radius: 0;
+    padding: 1vw;
+    background-color: rgb(67, 66, 66);
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/*Photos*/
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 25%;
+    max-width: 35%;
+    padding-right: 16px;
+}
+  
+.column img {
+    margin-top: 16px;
+    vertical-align: middle;
+    width: 100%;
+    cursor: pointer;
+}
+
+.filter {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 180vh;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(122, 122, 122, 0.759);
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image-container {
+    margin: 10vw auto;
+    height: 100vh;
+    max-width: 75%;
+}
+
+.image-container img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Amenities*/
+
+.amenity {
+    grid-template-columns: 4fr 3fr;
+}
+
+/*About*/
+
+.about #hero {
+    margin-bottom: 5vw;  
+}
+
+.about p {
+    line-height: 2.5vw;
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        height: 18vh;
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #block {
+        height: 18vh;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+
+    h3 {
+        font-size: 2vh;
+    }
+
+    p {
+        font-size: 1.75vh;
+        line-height: 2vh;
+    }
+
+    #testimonies {
+        height: 20vh;
+        background-color: rgb(89, 74, 74);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr 2fr 1fr;
+    }
+
+    .comment {
+        font-size: 1.5vh;
+    }
+
+    .comment-lionel {
+        grid-row-start: 1;
+    }
+    
+    .signature-lionel {
+        grid-row-start: 2;
+    }
+
+    .comment-milo {
+        grid-row-start: 3;
+    }
+    
+    .signature-milo {
+        grid-row-start: 4;
+    }
+
+    #book button {
+        font-size: 1.5vh;
+    }
+
+    button {
+        font-size: 1.5vh;
+    } 
+
+    .about p {
+        line-height: 2vh;
+    }
+}
